@@ -1,0 +1,209 @@
+.side-bar {
+	background-color: map-get($colorMap, MidnightBlue);
+	color: map-get($colorMap, greydark);
+	padding: 2.8rem 2.8rem;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	@include media(sm) {
+		padding: 2.6rem 1.5rem;
+	}
+}
+
+.wrapper {
+	z-index: 1;
+	width: 100%;
+}
+
+.cloud {
+	background: url("../../img/Cloud-background.png") center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	width: 120%;
+	height: 410px;
+	margin-top: 45px;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	content: "";
+	opacity: 0.1;
+	overflow-x: hidden;
+	animation: moving 30s infinite linear;
+}
+
+@keyframes moving {
+	0%,
+	100% {
+		transform: translateX(-100%);
+	}
+
+	50% {
+		transform: translateX(100%);
+	}
+}
+
+//element side-bar
+.location {
+	background-color: map-get($colorMap, greyback);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	height: 40px;
+	width: 40px;
+	padding: 0.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+i.iconmap > img {
+	width: 14px;
+	height: 19px;
+	margin: 0 0.8rem 0 0;
+	color: white;
+}
+
+.search-places {
+	background-color: map-get($colorMap, greyback);
+	min-width: 156px;
+	@include button-base;
+	height: 40px;
+	transition: 0.2s;
+	&:hover {
+		background-color: map-get($colorMap, fahrenheit);
+	}
+}
+
+.search-button {
+	background-color: map-get($colorMap, violet);
+	@include button-base;
+	height: 48px;
+}
+
+.search-location {
+	border: 1px solid map-get($colorMap, greylight);
+	padding: 0.82rem 1rem;
+	display: inline-block;
+	@include media(lg) {
+		width: 100%;
+		margin-right: 1rem;
+		display: flex;
+		min-width: 188px;
+	}
+	& i {
+		vertical-align: middle;
+	}
+	& i img {
+		width: 16px;
+		height: 16px;
+	}
+	& input {
+		background: transparent;
+		color: map-get($colorMap, greylight);
+		border: none;
+		margin-left: 0.5rem;
+	}
+}
+
+.close {
+	display: block;
+	text-align: right;
+	font-size: 24px;
+	cursor: pointer;
+	position: relative;
+	margin-bottom: 3rem;
+	color: white;
+	transition: 0.2s;
+	& img {
+		width: 17px;
+	}
+}
+
+//search-city
+
+.search-city {
+	background: map-get($colorMap, MidnightBlue);
+	width: 460px;
+	min-height: 100%;
+	z-index: 1;
+	top: 0;
+	left: 46px;
+	transition: transform 0.5s ease;
+	position: fixed;
+	overflow-y: auto;
+	padding: 1.2rem 3rem;
+	@include media(sm) {
+		padding: 2.6rem 1rem;
+	}
+}
+
+.currentweather {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	& img {
+		height: 230px;
+		width: 202px;
+		margin-top: 6rem;
+		@include media(sm) {
+			margin-top: 4rem;
+		}
+	}
+	& h3 {
+		margin-top: 0;
+		margin-bottom: 87px;
+		font-size: map-get($textSizeMap, l);
+		@include media(sm) {
+			margin-bottom: 48px;
+		}
+	}
+	& h3.temp {
+		color: map-get($colorMap, greylight);
+		font-size: map-get($textSizeMap, xxl);
+		margin-top: 6.9rem;
+		margin-bottom: 5rem;
+		font-weight: normal;
+		@include media(sm) {
+			margin-top: 2.9rem;
+			margin-bottom: 3rem;
+		}
+	}
+	& h3.temp span {
+		color: map-get($colorMap, detailscity);
+		font-size: map-get($textSizeMap, xl);
+	}
+	& h4 {
+		font-size: map-get($textSizeMap, s);
+		font-weight: normal;
+
+		margin: 0 0 32px 0;
+	}
+	& p {
+		margin: 0;
+		display: inherit;
+		align-items: center;
+		& .fa-map-marker-alt {
+			margin-right: 9px;
+		}
+	}
+}
+
+.slideIn {
+	transform: translateX(-46px);
+	@include media(lg) {
+		width: 100%;
+	}
+}
+
+.slideOut {
+	transform: translateX(-505px);
+}
+
+// @keyframes slide {
+// 	0% {
+// 		width: 0;
+// 	}
+// 	100% {
+// 		width: 380px;
+// 	}
+// }

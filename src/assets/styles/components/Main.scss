@@ -1,0 +1,190 @@
+.main {
+	background-color: map-get($colorMap, darkBlue);
+	color: map-get($colorMap, greydark);
+	padding: 0 0 1.5rem 0;
+	@include media(lg) {
+		padding: 2.6rem 1.5rem;
+	}
+}
+
+//Nav
+.navbar {
+	display: flex;
+	margin: 1.2rem 0 0.4rem 0;
+	& a {
+		margin-right: 1.5rem;
+	}
+	& a {
+		border-bottom: 1px solid transparent;
+	}
+	& a:hover {
+		border-bottom: 1px solid white;
+	}
+}
+
+// Temp Degrees
+
+.container-degrees {
+	text-align: right;
+}
+
+.button-celsius {
+	background-color: map-get($colorMap, fahrenheit);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	color: map-get($colorMap, greylight);
+	font-size: map-get($textSizeMap, s);
+	font-weight: bold;
+	transition: 0.2s;
+	margin-left: 0.75rem;
+	font-family: Helvetica, sans-serif;
+	&:hover {
+		background-color: map-get($colorMap, fahrenheit2);
+		color: map-get($colorMap, greydark);
+	}
+	&.active {
+		background-color: map-get($colorMap, greylight);
+		color: map-get($colorMap, dark);
+	}
+}
+
+// ListWeatherDays
+
+.listdayweather {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	gap: 1.68rem;
+	margin: 4.3rem 0 4rem 0;
+	& li {
+		background-color: map-get($colorMap, MidnightBlue);
+		padding: 1.125rem 1.225rem;
+		text-align: center;
+		min-height: 180px;
+		& p {
+			color: map-get($colorMap, greylight);
+			margin: 0 0 1rem 0;
+			font-size: map-get($textSizeMap, s);
+			white-space: nowrap;
+		}
+		& img {
+			width: 56px;
+			height: 56px;
+			margin-bottom: 2rem;
+		}
+		& div {
+			display: flex;
+			justify-content: space-between;
+			& p {
+				margin: 0px;
+			}
+			& p:nth-child(2) {
+				color: map-get($colorMap, greydark);
+			}
+		}
+	}
+}
+
+// ListHightlights
+.listhightlights {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+	gap: 3rem;
+	& li p.textr {
+		text-align: right;
+		color: map-get($colorMap, greydark);
+		margin: 0.2rem 0 0 0;
+	}
+	& li {
+		background-color: map-get($colorMap, MidnightBlue);
+		padding: 1.5rem;
+		text-align: center;
+		& p {
+			color: map-get($colorMap, greylight);
+			margin: 0 0 0.75rem 0;
+		}
+		& h3 {
+			font-size: 64px;
+			margin: 0 0 0.75rem 0;
+			color: map-get($colorMap, greylight);
+			& span {
+				font-size: 2rem;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+// wind-direction
+.wind-direction {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	& figure {
+		border-radius: 100%;
+		background-color: map-get($colorMap, greyback);
+		height: 29px;
+		width: 29px;
+		margin-right: 0.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& > img {
+			height: 12px;
+		}
+	}
+}
+
+// humidity
+.percent {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 700;
+	margin: auto;
+	div & > p {
+		color: map-get($colorMap, greydark);
+		margin: 0 0 0.2rem 0;
+	}
+}
+
+.progress-bar {
+	width: 100%;
+	height: 8px;
+	border-radius: 50px;
+	background-color: map-get($colorMap, greylight);
+	& p {
+		text-align: right;
+	}
+	&__progress {
+		height: 100%;
+		border-radius: 50px;
+		background-color: map-get($colorMap, yellow);
+	}
+}
+
+// loction selecect
+
+.location-select {
+	border: 1px solid transparent;
+	cursor: pointer;
+	color: map-get($colorMap, greydark);
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+	transition: all 0.2s ease;
+	padding: 1.375rem 0.75rem;
+	width: 100%;
+	height: 4rem;
+	transition: all 0.2s ease;
+	.fas .fa-chevron-right {
+		display: none;
+	}
+	&:hover {
+		border: 1px solid map-get($colorMap, greylight);
+		color: map-get($colorMap, greylight);
+		.fas .fa-chevron-right {
+			display: block;
+		}
+	}
+}

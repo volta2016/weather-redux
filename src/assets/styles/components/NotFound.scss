@@ -1,0 +1,31 @@
+.notfound {
+	background-color: map-get($colorMap, MidnightBlue);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	& h2 {
+		font-size: map-get($textSizeMap, xl);
+		color: map-get($colorMap, greylight);
+	}
+	& img {
+		height: 200px;
+	}
+	& span {
+		color: map-get($colorMap, greylight);
+		margin: 1rem 0 1.5rem 0;
+		font-size: map-get($textSizeMap, m);
+	}
+	& button {
+		@include button-base;
+		background-color: map-get($colorMap, fahrenheit);
+		min-width: 156px;
+		height: 40px;
+		padding: 0 18px;
+		transition: 0.2s;
+		&:hover {
+			background-color: map-get($colorMap, greyback);
+		}
+	}
+}
