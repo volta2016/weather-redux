@@ -1,48 +1,74 @@
 {
-  "name": "weather-app-redux",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@reduxjs/toolkit": "^1.5.1",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "axios": "^0.21.1",
-    "node-sass": "^4.14.1",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.4",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "redux": "^4.1.0",
-    "redux-devtools-extension": "^2.13.9",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "weather-app-redux",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@reduxjs/toolkit": "^1.5.1",
+		"@testing-library/jest-dom": "^5.11.4",
+		"@testing-library/react": "^11.1.0",
+		"@testing-library/user-event": "^12.1.10",
+		"axios": "^0.21.1",
+		"node-sass": "^4.14.1",
+		"prop-types": "^15.7.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-redux": "^7.2.4",
+		"react-router-dom": "^5.2.0",
+		"react-scripts": "4.0.3",
+		"redux": "^4.1.0",
+		"redux-devtools-extension": "^2.13.9",
+		"redux-logger": "^3.0.6",
+		"redux-thunk": "^2.3.0",
+		"web-vitals": "^1.0.1"
+	},
+	"scripts": {
+		"start": "webpack --mode=development",
+		"build": "webpack --mode=production",
+		"dev-server": "webpack serve",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "7.12.17",
+		"@babel/plugin-proposal-export-default-from": "^7.14.5",
+		"@babel/plugin-transform-runtime": "^7.14.5",
+		"@babel/preset-env": "7.12.17",
+		"@babel/preset-react": "7.12.13",
+		"@babel/runtime": "^7.14.6",
+		"@svgr/webpack": "5.5.0",
+		"babel-loader": "8.2.2",
+		"babel-polyfill": "^6.26.0",
+		"copy-webpack-plugin": "7.0.0",
+		"core-js": "3.9.0",
+		"css-loader": "5.0.2",
+		"favicons-webpack-plugin": "5.0.1",
+		"file-loader": "6.2.0",
+		"html-webpack-plugin": "5.2.0",
+		"image-webpack-loader": "7.0.1",
+		"prettier": "1.19.1",
+		"regenerator-runtime": "0.13.7",
+		"sass-loader": "11.0.1",
+		"style-loader": "2.0.0",
+		"webpack": "5.23.0",
+		"webpack-cli": "4.5.0",
+		"webpack-dev-server": "3.11.2"
+	}
 }

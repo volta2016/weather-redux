@@ -1,11 +1,13 @@
 import React from "react";
-import { ReactComponent as SVGClose } from "../../../assets/img/sunny.svg";
+import Sunny from "../../../assets/img/sunny.svg";
 
 const LoadingHome = () => {
 	return (
 		<div className="loading-home">
 			<div>
-				<SVGClose />
+				<figure>
+					<img src={Sunny} alt="Sunny Loader" />
+				</figure>
 				<p>Loading Weather!</p>
 			</div>
 		</div>

@@ -177,14 +177,17 @@
 	width: 100%;
 	height: 4rem;
 	transition: all 0.2s ease;
-	.fas .fa-chevron-right {
+	.arrow {
 		display: none;
 	}
 	&:hover {
 		border: 1px solid map-get($colorMap, greylight);
 		color: map-get($colorMap, greylight);
-		.fas .fa-chevron-right {
+		.arrow {
 			display: block;
+			& img {
+				width: 7px;
+			}
 		}
 	}
 }

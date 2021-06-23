@@ -1,5 +1,6 @@
 const path = require("path");
 
+
 module.exports = {
 	mode: "production",
 	entry: "./src/index.js",
@@ -10,7 +11,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\(js|jsx)$/,
+				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				loader: "babel-loader",
 			},
@@ -19,11 +20,11 @@ module.exports = {
 				use: ["style-loader", "css-loader"],
 			},
 			{
-				tets: /\.svg$/,
-				use: ["@svgr/webapack"],
+				test: /\.svg$/,
+				use: ["@svgr/webpack"],
 			},
 			{
-				test: /\.(gif|png|jep?g)$/i,
+				test: /\.(gif|png|jep?g|ico|svg)$/i,
 				use: [
 					"file-loader",
 					{
@@ -42,7 +43,10 @@ module.exports = {
 		],
 	},
 	resolve: {
-		extension: [".js", "jsx"],
+		alias: {
+			components: path.resolve(__dirname, "src/components"),
+		},
+		extensions: [".js", ".jsx"],
 	},
 	performance: {
 		hints: process.env.NODE_ENV === "production" ? "error" : false,

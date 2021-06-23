@@ -1,0 +1,2 @@
+(self.webpackChunkweather_app_redux=self.webpackChunkweather_app_redux||[]).push([[306],{7306:function(e,a,r){"use strict";r.r(a),r(7294);var t=r(5893);a.default=function(e){return(0,t.jsx)("img",{className:"imgres",src:e.image,alt:e.title})}}}]);
+//# sourceMappingURL=306.bundle.js.map

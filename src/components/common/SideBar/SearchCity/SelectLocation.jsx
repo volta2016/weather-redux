@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { getSearchWoeid } from "../../../../store/thunk";
 import { closeSidebar, setState } from "../../../../store/slice/weatherSlice";
+import ArroRight from "../../../../assets/img/arrowright.svg"
 
 const SelectLocation = ({ location, woeid }) => {
 	const dispatch = useDispatch();
@@ -14,7 +15,9 @@ const SelectLocation = ({ location, woeid }) => {
 	return (
 		<div onClick={handleClick} className="location-select">
 			<span>{location}</span>
-			<i className="fas fa-chevron-right"></i>
+			<i className="arrow">
+				<img src={ArroRight} alt="arrow right" />
+			</i>
 		</div>
 	);
 };
