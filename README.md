@@ -63,6 +63,7 @@ latt_long:"51.506321,-0.12714"
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Redux thunk](https://redux-toolkit.js.org/api/createAsyncThunk#return-value)
 - [Sass](https://sass-lang.com/)
+- [Axios](https://www.npmjs.com/package/axios)
 - [Webpack](https://v4.webpack.js.org/)
 - [Babel](https://babeljs.io/)
 

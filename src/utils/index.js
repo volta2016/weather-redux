@@ -3,6 +3,7 @@
 const dayWeek = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
 const monthYear = [
 	"Jan",
+	"Feb",
 	"Mar",
 	"Apr",
 	"May",
