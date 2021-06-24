@@ -73,26 +73,26 @@ url [see API](https://www.metaweather.com/).
 
 ## How To Use Weather App
 
-- Puedes compartir tu ubicacion actual para saber el pronosticos de los siguientes 5 días 
+- You can share your current location to know the forecast for the next 5 days
 
 ![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-2.png)
 
-- Puedes filtrar una ciudad por ejemplo Lima 
+- You can filter a city for example Lima
 
 ![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-3.png)
 
-- Espera que cargue las ciudad que buscas
+- Wait for it to load the cities you are looking for
 
 ![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-4.png)
 
-- Seleciona la ciudad
+- Select the city
 
 ![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-5.png)
 
-- Se actualizaran los datos com el tiempo actual y puedes cambiar los grados  Celsius a Fahrenheit y viceversa
+- The data will be updated with the current weather and you can change the degrees Celsius to Fahrenheit and vice versa
 
 ![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-6.png)
 
-- Puedes ver una reseña del manejador de estado que se uso para desarrollar la Weather App
+- You can see a review of the status manager that was used to develop the Weather App
 
 ![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-7.png)
