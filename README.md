@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Weather App - React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Weather application which shows the weather of the current location of the user
 
-## Available Scripts
+## App Capture
 
-In the project directory, you can run:
+![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-1.png)
 
-### `yarn start`
+url [see project](https://weather-app-redux.vercel.app/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### dev requirements
 
-### `yarn test`
+- Connection and consumption of apis. Calls can be with fetch or axios
+- Creation of routes + lazy loading the project
+- Clean architecture based on good practice architecture patterns with Code Splitting
+- Implementation of page not found 404
+- Apply the use of hooks
+- Creation of some custom hook
+- Use of Prop-Types in at least 3 components
+- Packaging of resources to production with Webpack and Babel
+- Deployment in production in Vercel
+- The UI can be implemented as it best suits them
+- Research and apply the ErrorBoundary HOC (error limits) to your project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### features
 
-### `yarn build`
+- You can see the weather of the default city London or the current city where the user is
+- You can search the weather and filter by city
+- You can see the weather of the current day and the next 5 days
+- you can see the date and the weather location
+- You can see the state of the weather by iconography
+- You can see the minimum and maximum degree of each day
+- You can see the state and direction of the wind
+- You can see the humidity percentage
+- you can see a percentage bar with the humidity status
+- You can see the number of air pressure
+- You can request the weather of your current location
+- You can convert the temperature in degrees Celsius to Fahrenheit and vice versa
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### My solution
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+My solution to develop the app is to use redux as a state manager, the initial state
+It is an object with several properties which I will be saving and modifying with the behavior
+of the flux pattern in the UI, each change applied by the user triggers an action, which thanks to
+the redux thunk middleware can trigger not only objects but also functions with asynchronous logic.
+The action of dispatch goes to the reducer, the reducer generates a new state and we update the view.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We centralize all the logic in a single slice thanks to redux toolkit, searchLocation in this case
+initialize to null within the properties of the searchLocation (pin) object: null
+but after the action is triggered, it goes to reducer and is updated as an object with the properties:
 
-### `yarn eject`
+title:"London"
+location_type:"City"
+woeid:44418
+latt_long:"51.506321,-0.12714"
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/diagram-redux-toolkit.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built With
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- React js
+- Redux
+- Redux Toolkit
+- Redux thunk
+- Sass
+- Webpack
+- Babel
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### API to get data
 
-## Learn More
+url [see API](https://www.metaweather.com/).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How To Use Weather App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Puedes compartir tu ubicacion actual para saber el pronosticos de los siguientes 5 días 
 
-### Code Splitting
+![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-2.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Puedes filtrar una ciudad por ejemplo Lima 
 
-### Analyzing the Bundle Size
+![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-3.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Espera que cargue las ciudad que buscas
 
-### Making a Progressive Web App
+![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-4.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Seleciona la ciudad
 
-### Advanced Configuration
+![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-5.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Se actualizaran los datos com el tiempo actual y puedes cambiar los grados  Celsius a Fahrenheit y viceversa
 
-### Deployment
+![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-6.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Puedes ver una reseña del manejador de estado que se uso para desarrollar la Weather App
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![screenshot](https://raw.githubusercontent.com/volta2016/weather-redux/master/src/assets/img/screenreadme/screely-7.png)
