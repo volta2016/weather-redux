@@ -8,7 +8,6 @@ Weather application which shows the weather of the current location of the user
 
 url [see project](https://weather-app-redux.vercel.app/).
 
-
 ### dev requirements
 
 - Connection and consumption of apis. Calls can be with fetch or axios
@@ -59,13 +58,13 @@ latt_long:"51.506321,-0.12714"
 
 ### Built With
 
-- React js
-- Redux
-- Redux Toolkit
-- Redux thunk
-- Sass
-- Webpack
-- Babel
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Redux thunk](https://redux-toolkit.js.org/api/createAsyncThunk#return-value)
+- [Sass](https://sass-lang.com/)
+- [Webpack](https://v4.webpack.js.org/)
+- [Babel](https://babeljs.io/)
 
 ### API to get data
 
