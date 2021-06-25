@@ -36,6 +36,7 @@
 	cursor: pointer;
 	color: map-get($colorMap, greylight);
 	font-size: map-get($textSizeMap, s);
+	text-align: center;
 	font-weight: bold;
 	transition: 0.2s;
 	margin-left: 0.75rem;
